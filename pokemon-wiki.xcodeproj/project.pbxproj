@@ -15,6 +15,8 @@
 		C9CC0DE028A8D794000538E8 /* pokemon_wikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC0DDF28A8D794000538E8 /* pokemon_wikiTests.swift */; };
 		C9CC0DEA28A8D794000538E8 /* pokemon_wikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC0DE928A8D794000538E8 /* pokemon_wikiUITests.swift */; };
 		C9CC0DEC28A8D794000538E8 /* pokemon_wikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC0DEB28A8D794000538E8 /* pokemon_wikiUITestsLaunchTests.swift */; };
+		C9CC0DF928A8E3DD000538E8 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC0DF828A8E3DD000538E8 /* MainModel.swift */; };
+		C9CC0DFB28A8E57E000538E8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC0DFA28A8E57E000538E8 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		C9CC0DE528A8D794000538E8 /* pokemon-wikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pokemon-wikiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CC0DE928A8D794000538E8 /* pokemon_wikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokemon_wikiUITests.swift; sourceTree = "<group>"; };
 		C9CC0DEB28A8D794000538E8 /* pokemon_wikiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pokemon_wikiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C9CC0DF828A8E3DD000538E8 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		C9CC0DFA28A8E57E000538E8 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,8 @@
 				C9CC0DC828A8D793000538E8 /* AppDelegate.swift */,
 				C9CC0DCA28A8D793000538E8 /* SceneDelegate.swift */,
 				C9CC0DCC28A8D793000538E8 /* ViewController.swift */,
+				C9CC0DFA28A8E57E000538E8 /* Network.swift */,
+				C9CC0DF828A8E3DD000538E8 /* MainModel.swift */,
 				C9CC0DD128A8D794000538E8 /* Assets.xcassets */,
 				C9CC0DD328A8D794000538E8 /* LaunchScreen.storyboard */,
 				C9CC0DD628A8D794000538E8 /* Info.plist */,
@@ -254,6 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CC0DFB28A8E57E000538E8 /* Network.swift in Sources */,
+				C9CC0DF928A8E3DD000538E8 /* MainModel.swift in Sources */,
 				C9CC0DCD28A8D793000538E8 /* ViewController.swift in Sources */,
 				C9CC0DC928A8D793000538E8 /* AppDelegate.swift in Sources */,
 				C9CC0DCB28A8D793000538E8 /* SceneDelegate.swift in Sources */,
