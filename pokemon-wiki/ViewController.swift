@@ -57,6 +57,15 @@ class ViewController: UIViewController {
     private func loadPokemons() {
         activityView.startAnimating()
         Network.loadPokemons("https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0") { model in
+            if model.results.isEmpty {
+                let alertErorrLoad = UIAlertController(title: "Internet error", message: "Check your internet connection", preferredStyle: .alert)
+                let repeatAction = UIAlertAction(title: "Reload", style: .default) { _ in
+                    self.loadPokemons()
+                }
+                alertErorrLoad.addAction(repeatAction)
+                self.activityView.stopAnimating()
+                self.present(alertErorrLoad, animated: true)
+            }
             self.model = model.results.sorted(by: {$0.name < $1.name})
             self.activityView.stopAnimating()
         }
