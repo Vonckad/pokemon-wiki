@@ -5,7 +5,7 @@
 
 ## Предпросмотр
 <p align="left">
-<img src="https://raw.githubusercontent.com/Vonckad/pokemon-wiki/main/1.jpg" width="30%"> 
-<img src="https://raw.githubusercontent.com/Vonckad/pokemon-wiki/main/2.jpg" width="30%"> 
-<img src="https://raw.githubusercontent.com/Vonckad/pokemon-wiki/main/3.jpg" width="30%"> 
+<img src="https://raw.githubusercontent.com/Vonckad/pokemon-wiki/main/1.png" width="30%"> 
+<img src="https://raw.githubusercontent.com/Vonckad/pokemon-wiki/main/2.png" width="30%"> 
+<img src="https://raw.githubusercontent.com/Vonckad/pokemon-wiki/main/3.png" width="30%"> 
 </p>
