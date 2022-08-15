@@ -30,7 +30,13 @@ final class Network {
             guard let data = data else {
                 print("Erorr load")
                 return }
-            guard let model = try? JSONDecoder().decode(ImageModel.self, from: data) else { return }
+            guard let model = try? JSONDecoder().decode(ImageModel.self, from: data) else {
+                print("error get image")
+                DispatchQueue.main.async {
+                    guard let imageBall = UIImage(named: "ball") else { return }
+                    complition(imageBall)
+                }
+                return }
             guard let imgUrl = URL(string: model.sprites.front_default) else {
                 print("Erorr url = \(model.sprites.front_default)")
                 return }

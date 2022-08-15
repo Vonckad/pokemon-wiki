@@ -93,19 +93,32 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let pokemon = isFiltering ? filterModel[indexPath.row] : model[indexPath.row]
-        let alert = UIAlertController(title: "This is \(pokemon.name)", message: "\n\n\n", preferredStyle: .alert)
+        
+        let alert = UIAlertController(title: pokemon.name, message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Clouse", style: .destructive, handler: nil))
+        
+        let imageActivityView = UIActivityIndicatorView(style: .large)
+        imageActivityView.translatesAutoresizingMaskIntoConstraints = false
+        imageActivityView.hidesWhenStopped = true
+        imageActivityView.startAnimating()
+        alert.view.addSubview(imageActivityView)
+        
+        NSLayoutConstraint.activate([
+            imageActivityView.centerXAnchor.constraint(equalTo: alert.view.centerXAnchor),
+            imageActivityView.centerYAnchor.constraint(equalTo: alert.view.centerYAnchor)])
         
         Network.loadImage(pokemon.url) { image in
             let image = UIImageView(image: image)
+            imageActivityView.stopAnimating()
+            image.contentMode = .scaleAspectFit
             alert.view.addSubview(image)
             image.translatesAutoresizingMaskIntoConstraints = false
             
             NSLayoutConstraint.activate([
                 image.centerXAnchor.constraint(equalTo: alert.view.centerXAnchor),
                 image.centerYAnchor.constraint(equalTo: alert.view.centerYAnchor),
-                image.widthAnchor.constraint(equalToConstant: 64),
-                image.heightAnchor.constraint(equalToConstant: 64)])
+                image.widthAnchor.constraint(equalToConstant: 180),
+                image.heightAnchor.constraint(equalToConstant: 180)])
         }
         self.present(alert, animated: true, completion: nil)
     }
